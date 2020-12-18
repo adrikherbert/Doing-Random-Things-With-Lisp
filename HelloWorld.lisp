@@ -1,11 +1,11 @@
 ;;;; Simple program created through tutorial by Derek Banas
 
 #||
+
   I'm a
   multi
   line
   comment!
-||#
 
 ; Printing to the terminal! (hence the 't')
 (format t "What is your age?~%")
@@ -35,3 +35,35 @@
 
 ; Calling our function!
 (get-school-year *age*)
+
+; Add a newline
+(terpri)
+
+'When' and 'Unless' are similar
+to an 'if' statement, but multiple lines
+are executed--'Unless' is the inverse of
+'When'
+
+||#
+
+#||
+  LOOPS
+    * loop for x from 1 to 10 do ...
+    * loop for x in '(...) <-- list
+    * dotimes (x 10) ...
+
+  IMPORTANT FUNCTIONS
+    * (cons 'carrot 'broccoli) <-- "consecutive", stitches list elements together
+    * (list 'carrot 'broccoli 'celery) <-- creates list
+    * (car '(...)) <-- returns first list element
+    * (cdr '(...)) <-- returns everything but first list element
+      * 'a' returns first element, 'd' returns everything, so if you wanted
+      the second element in a list, you would use (cadr '(...))
+      * only allowed 4 'a's and 'd's
+
+  LIST CONDITIONALS & OTHER SHENANS
+    * (listp ...) <-- checks if parameter is a list
+    * (member X '(...)) <-- checks if 'X' is in the parameter list
+    * (append ...lists...) <-- appends lists and items to lists and items
+    * (push X '(list)) <-- pushes a value onto a list stack-style
+||#
