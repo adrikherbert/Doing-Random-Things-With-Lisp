@@ -67,3 +67,14 @@ are executed--'Unless' is the inverse of
     * (append ...lists...) <-- appends lists and items to lists and items
     * (push X '(list)) <-- pushes a value onto a list stack-style
 ||#
+
+(defun palindromep (elements)
+  (format t "~d~%" (length elements))
+  (cond
+      ((or (= (length elements) 0) (= (length elements) 1)) t)
+      ((and (> (length elements) 1) (eq (car elements) (car (last elements)))) (palindromep (butlast (cdr elements))))
+      (t nil)
+  )
+)
+
+(format t "~a~%" (palindromep '(abc dcd abc dcd)))
